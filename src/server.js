@@ -1,9 +1,5 @@
-const express = require("express");
+import app from "./app";
 
-const server = express();
-
-server.listen("3333", () => {
-  console.log("Server Up!");
+app.listen("3333", () => {
+  console.log("Server UP!");
 });
-
-module.exports = server;
