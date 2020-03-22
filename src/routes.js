@@ -1,10 +1,9 @@
-import express from "express";
-const routes = express.Router();
+import { Router } from "express";
 
-const users = [{ nome: "Joao" }, { nome: "Paulo" }, { nome: "Lucas" }];
+import UserController from "./app/controller/UserController";
 
-routes.get("/users", (req, res) => {
-  res.json(users);
-});
+const routes = new Router();
+
+routes.post("/users", UserController.store);
 
 module.exports = routes;
